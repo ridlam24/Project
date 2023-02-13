@@ -12,9 +12,16 @@ public class Hazel extends DragonHeartstring
      * Act - do whatever the Hazel wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    private GreenfootImage image;
     
     public void act()
     {
         // Add your action code here.
+    }
+    
+    public void imageSetup() {
+        image = getImage();
+        image.scale(image.getWidth()/3, image.getHeight()/3);
+        setImage(image);
     }
 }

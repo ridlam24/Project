@@ -8,6 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Laurel extends PhoenixTailFeather
 {
+    private GreenfootImage image;
+    
     /**
      * Act - do whatever the Laurel wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -15,5 +17,11 @@ public class Laurel extends PhoenixTailFeather
     public void act()
     {
         // Add your action code here.
+    }
+    
+    public void imageSetup() {
+        image = getImage();
+        image.scale(image.getWidth()/8, image.getHeight()/8);
+        setImage(image);
     }
 }

@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class UnicornHair extends Wand
+public abstract class UnicornHair extends Wand
 {
     /**
      * Act - do whatever the UnicornHair wants to do. This method is called whenever

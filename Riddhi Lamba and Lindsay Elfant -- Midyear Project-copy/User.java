@@ -8,6 +8,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class User extends Wizard
 {
+    private Health health = new Health();
+    
+    public User() {
+        ((MyWorld) getWorld()).addObject(health, 50, 50);
+    }
     
     /**
      * Act - do whatever the User wants to do. This method is called whenever

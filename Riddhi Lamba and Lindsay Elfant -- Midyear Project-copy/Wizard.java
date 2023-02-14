@@ -15,10 +15,15 @@ public abstract class Wizard extends Actor
 
     }
 
+    public void setHealth(int health) {
+        this.health = health; 
+
+    }
+
     public int getHealth() {
         return health; 
     }
-    
+
     /**
      * Act - do whatever the Wizard wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.

@@ -11,13 +11,16 @@ public abstract class Wizard extends Actor
     private int health; 
 
     public Wizard() {
-        health = 100; 
-
+        health = 100;
     }
 
     public void setHealth(int health) {
         this.health = health; 
 
+    }
+    
+    public void changeHealth(int health) {
+        this.health += health;
     }
 
     public int getHealth() {

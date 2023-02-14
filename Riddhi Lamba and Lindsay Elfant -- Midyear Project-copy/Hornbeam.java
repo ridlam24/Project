@@ -21,5 +21,6 @@ public class Hornbeam extends UnicornHair
         image = getImage();
         image.scale(image.getWidth()/3, image.getHeight()/4);
         setImage(image);
+        turn(-45);
     }
 }

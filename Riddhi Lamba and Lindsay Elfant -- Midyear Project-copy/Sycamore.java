@@ -22,5 +22,6 @@ public class Sycamore extends PhoenixTailFeather
         image = getImage();
         image.scale(image.getWidth()/4, image.getHeight()/5);
         setImage(image);
+        turn(-45);
     }
 }

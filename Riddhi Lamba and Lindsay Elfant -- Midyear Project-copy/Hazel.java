@@ -23,5 +23,6 @@ public class Hazel extends DragonHeartstring
         image = getImage();
         image.scale(image.getWidth()/3, image.getHeight()/3);
         setImage(image);
+        turn(-45);
     }
 }

@@ -23,5 +23,6 @@ public class Laurel extends PhoenixTailFeather
         image = getImage();
         image.scale(image.getWidth()/8, image.getHeight()/8);
         setImage(image);
+        turn(-45);
     }
 }

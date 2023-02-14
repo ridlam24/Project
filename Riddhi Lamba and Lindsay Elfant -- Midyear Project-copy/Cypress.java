@@ -19,6 +19,6 @@ public class Cypress extends DragonHeartstring
     }
     public void imageSetup() {
         super.imageSetup();
-        turn(180);
+        turn(135);
     }
 }

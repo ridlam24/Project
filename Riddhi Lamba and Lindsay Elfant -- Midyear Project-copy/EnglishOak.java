@@ -21,5 +21,6 @@ public class EnglishOak extends UnicornHair
         image = getImage();
         image.scale(image.getWidth()/5, image.getHeight()/5);
         setImage(image);
+        turn(-45);
     }
 }

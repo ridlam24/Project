@@ -1,15 +1,15 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class SalvioHexa here.
+ * Write a description of class SalvioHexia here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class SalvioHexa extends Defensive
+public class SalvioHexia extends Defensive
 {
     /**
-     * Act - do whatever the SalvioHexa wants to do. This method is called whenever
+     * Act - do whatever the SalvioHexia wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act()

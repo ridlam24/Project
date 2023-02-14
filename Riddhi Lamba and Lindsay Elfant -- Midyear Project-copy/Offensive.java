@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Offensive extends Spell
+public abstract class Offensive extends Spell
 {
     /**
      * Act - do whatever the Offensive wants to do. This method is called whenever

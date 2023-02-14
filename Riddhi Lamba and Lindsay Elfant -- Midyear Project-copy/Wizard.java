@@ -16,7 +16,6 @@ public abstract class Wizard extends Actor
 
     public void setHealth(int health) {
         this.health = health; 
-
     }
     
     public void changeHealth(int health) {

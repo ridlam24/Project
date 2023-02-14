@@ -8,8 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Health extends Actor
 {
-    private int score = (new HealthFrame()).getImage().getWidth();
-    
     /**
      * Act - do whatever the Health wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -18,5 +16,4 @@ public class Health extends Actor
     {
         // Add your action code here.
     }
-    
 }

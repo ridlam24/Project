@@ -27,6 +27,7 @@ public class MyWorld extends World
         showText("Opponent Health: ", 905, 30);
         addObject(new HealthFrame(), 138, 70);
         addObject(new HealthFrame(), getWidth()-138, 70);
+        addObject(new User(), 138, getHeight()/2); 
     }
     
     public void act() {

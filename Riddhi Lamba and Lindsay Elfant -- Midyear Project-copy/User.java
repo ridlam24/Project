@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class User extends Wizard
 {
+    
     /**
      * Act - do whatever the User wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.

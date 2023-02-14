@@ -1,31 +1,26 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Wand here.
+ * Write a description of class EnglishOak here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public abstract class Wand extends Actor
+public class EnglishOak extends UnicornHair
 {
-    GreenfootImage image;
+    private GreenfootImage image;
     /**
-     * Act - do whatever the Wand wants to do. This method is called whenever
+     * Act - do whatever the EnglishOak wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    
-    public Wand() {
-        imageSetup();
-    }
-    
     public void act()
     {
         // Add your action code here.
     }
-    
-    public void imageSetup(){
+    public void imageSetup() {
         image = getImage();
-        image.scale(image.getWidth()/2, image.getHeight()/2);
+        image.scale(image.getWidth()/5, image.getHeight()/5);
         setImage(image);
+        turn(-45);
     }
 }

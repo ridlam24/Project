@@ -25,6 +25,8 @@ public class MyWorld extends World
         imageSetup();
         showText("Your Health: ", 75, 30);
         showText("Opponent Health: ", 905, 30);
+        addObject(new HealthFrame(), 138, 70);
+        addObject(new HealthFrame(), getWidth()-138, 70);
     }
     
     public void act() {

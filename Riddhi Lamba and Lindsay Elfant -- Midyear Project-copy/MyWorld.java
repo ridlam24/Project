@@ -12,7 +12,7 @@ public class MyWorld extends World
     private int x = getWidth();
     private int y = getHeight();
     
-    private String currentWand = "";
+    public String currentWand = "";
     
     /**
      * Constructor for objects of class MyWorld.

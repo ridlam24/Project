@@ -17,6 +17,13 @@ public class Health extends Actor
         image.scale(new HealthFrame().getImage().getWidth(), new HealthFrame().getImage().getHeight());
         setImage(image);
     }
+
+    public void changeHealthBar(int health) {
+        GreenfootImage image = getImage(); 
+        image.scale((health/100) * (new HealthFrame().getImage().getWidth()), new HealthFrame().getImage().getHeight());
+
+    }
+
     public void act()
     {
         // Add your action code here.

@@ -12,7 +12,7 @@ public class MyWorld extends World
     private int x = getWidth();
     private int y = getHeight();
     
-    private String currentWand = "";
+    public String currentWand = "";
     
     /**
      * Constructor for objects of class MyWorld.
@@ -27,6 +27,7 @@ public class MyWorld extends World
         showText("Opponent Health: ", 905, 30);
         addObject(new HealthFrame(), 138, 70);
         addObject(new HealthFrame(), getWidth()-138, 70);
+        //addObject(new User(), 138, getHeight()/3 * 2); 
 
     }
     
@@ -76,6 +77,3 @@ public class MyWorld extends World
         }
     }
 }
-// omgggg
-//hiiiiii
-//this is my change 

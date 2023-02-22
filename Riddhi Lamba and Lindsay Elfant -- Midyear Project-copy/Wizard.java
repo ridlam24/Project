@@ -12,7 +12,6 @@ public abstract class Wizard extends Actor
 
     public Wizard() {
         health = 100;
-        
     }
 
     public void setHealth(int health) {

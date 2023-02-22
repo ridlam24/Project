@@ -11,7 +11,7 @@ public class User extends Wizard
     private Health health = new Health();
     
     public User() {
-        //((MyWorld) getWorld()).addObject(health, 50, 50);
+        ((MyWorld) getWorld()).addObject(health, 50, 50);
     }
     
     /**

@@ -28,6 +28,7 @@ public class MyWorld extends World
         addObject(new HealthFrame(), 138, 70);
         addObject(new HealthFrame(), getWidth()-138, 70);
         addObject(new User(), 138, getHeight()/3 * 2); 
+
     }
     
     public void act() {

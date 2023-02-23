@@ -1,4 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.*;
 
 /**
  * Write a description of class MyWorld here.
@@ -12,17 +13,16 @@ public class MyWorld extends World
     private int x = getWidth();
     private int y = getHeight();
     
-    private User user = new User();
-    private Opponent opponent = new Opponent();
-    
     public String currentWand = "";
     public String castSpell = ""; 
-    public String opposingSpell = "";
 
     private int userTurn = 0;
     
-    private String[] wands = {"Cypress", "Hazel", "Laurel", "Sycamore", "English Oak", "Hornbeam"};
-    private String[] spells = {"Episkey", "Protego", "Salvio Hexia", "Expelliarmus", "Sectumsempra", "Stupefy"};
+    private User user = new User();
+    private Opponent opponent = new Opponent();
+    
+    private ArrayList<String> wands = new ArrayList<String>(Arrays.asList("Cypress", "Hazel", "Laurel", "Sycamore", "English Oak", "Hornbeam"));
+    private ArrayList<String> spells = new ArrayList<String>(Arrays.asList("Episkey", "Protego", "Salvio Hexia", "Expelliarmus", "Sectumsempra", "Stupefy"));
     
     /**
      * Constructor for objects of class MyWorld.
@@ -38,15 +38,15 @@ public class MyWorld extends World
         addObject(new HealthFrame(), 138, 70);
         addObject(new HealthFrame(), getWidth()-138, 70);
         addObject(user, 138, getHeight()/3 * 2); 
-        addObject(opponent, getWidth()-138, getHeight()/3 * 2);
+        addObject(opponent, getWidth()-138, getHeight()/3 * 2); 
     }
     
     public void act() {
         if (currentWand.equals("")) {
-            chooseWand();   
+            chooseWand(); 
             user.chooseWand(currentWand);
-            opponent.chooseWand(wands[Greenfoot.getRandomNumber(6)]);
             user.addWand();
+            opponent.chooseWand(wands.get(Greenfoot.getRandomNumber(6)));
             opponent.addWand();
         }
 
@@ -57,13 +57,8 @@ public class MyWorld extends World
         }
 
         else {
-            int num = Greenfoot.getRandomNumber(6);
-            
-            opposingSpell = spells[num];
-            
-            opponent.castSpell(opposingSpell);
-            
-            //randomization
+            int num = Greenfoot.getRandomNumber(6); 
+            opponent.castSpell(spells.get(num));
             userTurn = 0;
         }
     }
@@ -74,7 +69,7 @@ public class MyWorld extends World
     }
 
     public void chooseSpell() {
-        String prompt = String.format("\n\n1: Defensive spell\n\ta: Episkey\n\tb: Protego\n\tc: Salvio Hexia\n\n2: Offensive\n\ta: Expelliarmus\n\tb: Stupefy\n\tc: Sectumsempra"); 
+        String prompt = String.format("\n\n1: Defensive spell\n\ta: Episkey\n\tb: Protego\n\tc: Salvio Hexia\n\n2: Offensive\n\ta: Expelliarmus\n\tb: Sectumsempra\n\tc: Stupefy"); 
         String spell = Greenfoot.ask("Which spell would you like to cast? Please enter your selection as a number followed by a letter, with no spaces in between." + prompt); 
         spell = spell.toLowerCase(); 
         switch(spell) {
@@ -91,15 +86,16 @@ public class MyWorld extends World
                 castSpell = "Expelliarmus"; 
                 break; 
             case "2b": 
-                castSpell = "Stupefy"; 
+                castSpell = "Sectumsempra"; 
                 break; 
             case "2c": 
-                castSpell = "Sectumsempra";
+                castSpell = "Stupefy";
                 break; 
             default:
                 Greenfoot.ask("Not an option, please try again. Enter any key to continue.");
                 chooseSpell(); 
         }
+
     }
     
     public void chooseWand() {

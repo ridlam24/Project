@@ -49,6 +49,12 @@ public abstract class Wizard extends Actor
         int index = spells.indexOf(spell);
         Spell cast = spellClass.get(index);
         changeHealth(cast.damage);
+        ((MyWorld) getWorld()).addObject(cast, wand.getImage().getWidth(), wand.getImage().getHeight()/2);
+        cast.move(20);
+        while (!isTouching(Wand.class)) {
+            cast.move(5);
+        }
+        ((MyWorld) getWorld()).removeObject(cast);
     }
     
     public void setHealth(int health) {

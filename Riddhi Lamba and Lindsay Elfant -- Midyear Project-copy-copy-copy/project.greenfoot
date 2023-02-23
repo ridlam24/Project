@@ -1,4 +1,9 @@
 #Greenfoot project file
+<<<<<<< HEAD
+class.Opponent.image=man01.png
+class.User.image=ppl3.png
+class.Wizard.image=boy1.png
+=======
 class.Cypress.image=cypress-removebg-preview.png
 class.EnglishOak.image=englishoak.png
 class.Episkey.image=green-removebg-preview.png
@@ -15,6 +20,7 @@ class.SalvioHexia.image=white-removebg-preview.png
 class.Stupefy.image=orange-removebg-preview\ (3).png
 class.Sycamore.image=sycamore-removebg-preview.png
 class.User.image=ppl3.png
+>>>>>>> fb361ef817047c21e60dfbb1edfb01ba4567e523
 dependency1.from=MyWorld
 dependency1.to=HealthFrame
 dependency1.type=UsesDependency
@@ -45,6 +51,7 @@ dependency5.type=UsesDependency
 dependency6.from=User
 dependency6.to=Cypress
 dependency6.type=UsesDependency
+<<<<<<< HEAD:Riddhi Lamba and Lindsay Elfant -- Midyear Project-copy-copy-copy/project.greenfoot
 dependency7.from=User
 dependency7.to=Hazel
 dependency7.type=UsesDependency
@@ -60,6 +67,22 @@ editor.fx.0.x=0
 editor.fx.0.y=0
 height=686
 package.numDependencies=13
+=======
+<<<<<<< HEAD
+editor.fx.0.height=735
+editor.fx.0.width=813
+editor.fx.0.x=458
+editor.fx.0.y=78
+height=865
+=======
+editor.fx.0.height=737
+editor.fx.0.width=814
+editor.fx.0.x=120
+editor.fx.0.y=14
+height=686
+>>>>>>> fb361ef817047c21e60dfbb1edfb01ba4567e523
+package.numDependencies=6
+>>>>>>> dd9349b7f5162abbfe920dcafbe61e08647cb3f1:Riddhi Lamba and Lindsay Elfant -- Midyear Project-copy/project.greenfoot
 package.numTargets=24
 project.charset=windows-1252
 publish.hasSource=false
@@ -244,7 +267,7 @@ target9.width=120
 target9.x=0
 target9.y=0
 version=3.0.0
-width=1294
+width=1453
 world.lastInstantiated=MyWorld
 xPosition=0
 yPosition=0

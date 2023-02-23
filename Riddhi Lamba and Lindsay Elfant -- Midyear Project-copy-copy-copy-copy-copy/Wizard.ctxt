@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Wizard
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Wizard\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=Wizard()
+comment2.params=choice
+comment2.target=void\ chooseWand(java.lang.String)
+comment3.params=
+comment3.target=void\ addWand()
+comment4.params=spell
+comment4.target=void\ castSpell(java.lang.String)
+comment5.params=health
+comment5.target=void\ setHealth(int)
+comment6.params=health
+comment6.target=void\ changeHealth(int)
+comment7.params=
+comment7.target=int\ getHealth()
+comment8.params=
+comment8.target=void\ act()
+comment8.text=\r\n\ Act\ -\ do\ whatever\ the\ Wizard\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+numComments=9

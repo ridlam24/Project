@@ -27,4 +27,8 @@ public class Opponent extends Wizard
         wand.turn(-90);
         ((MyWorld) getWorld()).addObject(wand, getX()-getImage().getWidth(), getY()-getImage().getHeight()/2);
     }
+    
+    public void changeHealthBar(int health) {
+        (this.health).changeHealthBar(health);
+    }
 }

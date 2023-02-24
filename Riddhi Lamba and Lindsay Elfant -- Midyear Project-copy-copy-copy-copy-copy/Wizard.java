@@ -13,8 +13,8 @@ public abstract class Wizard extends Actor
     
     public Wand wand;
     
-    private ArrayList<String> spells = new ArrayList<String>(Arrays.asList("Episkey", "Protego", "Salvio Hexia", "Expelliarmus", "Sectumsempra", "Stupefy"));
-    private ArrayList<Spell> spellClass = new ArrayList<Spell>(Arrays.asList(new Episkey(), new Protego(), new SalvioHexia(), new Expelliarmus(), new Sectumsempra(), new Stupefy()));
+    public ArrayList<String> spells = new ArrayList<String>(Arrays.asList("Episkey", "Protego", "Salvio Hexia", "Expelliarmus", "Sectumsempra", "Stupefy"));
+    public ArrayList<Spell> spellClass = new ArrayList<Spell>(Arrays.asList(new Episkey(), new Protego(), new SalvioHexia(), new Expelliarmus(), new Sectumsempra(), new Stupefy()));
 
     public Wizard() {
         health = 100;
@@ -49,12 +49,15 @@ public abstract class Wizard extends Actor
         int index = spells.indexOf(spell);
         Spell cast = spellClass.get(index);
         changeHealth(cast.damage);
+        changeHealthBar(health);
         ((MyWorld) getWorld()).addObject(cast, wand.getImage().getWidth(), wand.getImage().getHeight()/2);
         cast.move(20);
         while (!isTouching(Wand.class)) {
             cast.move(1);
         }
         ((MyWorld) getWorld()).removeObject(cast);
+        
+        ((MyWorld) getWorld()).showText(cast.toString() + "" + index + " " + cast.damage, 150, 150);
     }
     
     public void setHealth(int health) {
@@ -68,6 +71,8 @@ public abstract class Wizard extends Actor
     public int getHealth() {
         return health; 
     }
+    
+    public abstract void changeHealthBar(int health);
 
     /**
      * Act - do whatever the Wizard wants to do. This method is called whenever

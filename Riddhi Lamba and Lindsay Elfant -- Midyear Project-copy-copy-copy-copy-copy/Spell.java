@@ -17,4 +17,8 @@ public abstract class Spell extends Actor
     {
         // Add your action code here.
     }
+    
+    public String toString() {
+        return "" + damage;
+    }
 }

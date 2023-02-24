@@ -26,4 +26,8 @@ public class User extends Wizard
     public void addWand() {
         ((MyWorld) getWorld()).addObject(wand, getX()+getImage().getWidth(), getY()-getImage().getHeight()/2);
     }
+    
+    public void changeHealthBar(int health) {
+        (this.health).changeHealthBar(health);
+    }
 }

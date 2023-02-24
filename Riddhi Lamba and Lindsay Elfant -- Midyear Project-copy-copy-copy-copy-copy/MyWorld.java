@@ -21,6 +21,8 @@ public class MyWorld extends World
     private User user = new User();
     private Opponent opponent = new Opponent();
     
+    public boolean castDone = false;
+    
     private ArrayList<String> wands = new ArrayList<String>(Arrays.asList("Cypress", "Hazel", "Laurel", "Sycamore", "English Oak", "Hornbeam"));
     private ArrayList<String> spells = new ArrayList<String>(Arrays.asList("Episkey", "Protego", "Salvio Hexia", "Expelliarmus", "Sectumsempra", "Stupefy"));
     
@@ -53,14 +55,14 @@ public class MyWorld extends World
         if (userTurn == 0) {
             chooseSpell();
             user.castSpell(castSpell);
-            userTurn = 1; 
+            userTurn = 1;
         }
 
-        else {
-            int num = Greenfoot.getRandomNumber(6); 
-            opponent.castSpell(spells.get(num));
-            userTurn = 0;
-        }
+        //else {
+           // int num = Greenfoot.getRandomNumber(6); 
+            //opponent.castSpell(spells.get(num));
+           // userTurn = 0;
+       // }
     }
     
     public void imageSetup() {

@@ -20,7 +20,7 @@ public class User extends Wizard
      */
     public void act()
     {   
-        ((MyWorld) getWorld()).addObject(health, 100, 50);
+        ((MyWorld) getWorld()).addObject(health, 138, 70);
     }
     
     public void addWand() {

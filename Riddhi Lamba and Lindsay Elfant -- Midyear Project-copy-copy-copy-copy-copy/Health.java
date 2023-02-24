@@ -14,7 +14,7 @@ public class Health extends Actor
      */
     public Health() {
         GreenfootImage image = getImage();
-        image.scale(new HealthFrame().getImage().getWidth(), new HealthFrame().getImage().getHeight());
+        image.scale(new HealthFrame().getImage().getWidth()-7, new HealthFrame().getImage().getHeight()-16);
         setImage(image);
     }
 

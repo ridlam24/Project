@@ -20,7 +20,7 @@ public class Opponent extends Wizard
     public void act()
     {
         // Add your action code here.
-        ((MyWorld) getWorld()).addObject(health, 50, 50);
+        ((MyWorld) getWorld()).addObject(health, ((MyWorld) getWorld()).getWidth()-138, 70);
     }
     
     public void addWand() {

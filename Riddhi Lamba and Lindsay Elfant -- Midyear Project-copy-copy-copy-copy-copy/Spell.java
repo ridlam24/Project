@@ -18,7 +18,11 @@ public abstract class Spell extends Actor
         // Add your action code here.
     }
     
-    public String toString() {
-        return "" + damage;
+    public void setDamage(int d) {
+        damage = d;
+    }
+    
+    public boolean touching() {
+        return isTouching(Wand.class);
     }
 }

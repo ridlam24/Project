@@ -8,7 +8,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class SalvioHexia extends Defensive
 {
-    public int damage = -15;
+    public SalvioHexia() {
+        setDamage(-15);
+        getImage().scale(getImage().getWidth()/5, getImage().getHeight()/5);
+    }
+    
     /**
      * Act - do whatever the SalvioHexia wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.

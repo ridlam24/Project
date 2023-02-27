@@ -8,7 +8,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Stupefy extends Offensive
 {
-    public int damage = 15;
+    public Stupefy() {
+        setDamage(-15);
+        getImage().scale(getImage().getWidth()/5, getImage().getHeight()/5);
+    }
+    
     /**
      * Act - do whatever the Stupefy wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.

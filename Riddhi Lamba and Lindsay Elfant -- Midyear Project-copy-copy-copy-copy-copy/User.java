@@ -21,6 +21,7 @@ public class User extends Wizard
     public void act()
     {   
         ((MyWorld) getWorld()).addObject(health, 138, 70);
+        //this can't be in the act lol it needs to go in the user but how tf do i get it there ugh.
     }
     
     public void addWand() {

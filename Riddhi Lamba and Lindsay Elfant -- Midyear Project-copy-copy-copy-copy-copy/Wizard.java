@@ -50,14 +50,18 @@ public abstract class Wizard extends Actor
         Spell cast = spellClass.get(index);
         changeHealth(cast.damage);
         changeHealthBar(health);
-        ((MyWorld) getWorld()).addObject(cast, wand.getImage().getWidth(), wand.getImage().getHeight()/2);
-        cast.move(20);
-        while (!isTouching(Wand.class)) {
-            cast.move(1);
+        ((MyWorld) getWorld()).addObject(cast, wand.getX()+wand.getImage().getWidth(), wand.getY());
+        for (int i = 0; i < 100; i ++) {
+            cast.setLocation(cast.getX()+2, cast.getY()-1);
+            Greenfoot.delay(1);
+        }
+        for (int i = 0; i < 100; i ++) {
+            cast.setLocation(cast.getX()+2, cast.getY()+1);
+            Greenfoot.delay(1);
         }
         ((MyWorld) getWorld()).removeObject(cast);
-        
-        ((MyWorld) getWorld()).showText(cast.toString() + "" + index + " " + cast.damage, 150, 150);
+        GreenfootSound sound = new GreenfootSound("au.wav");
+        sound.play();
     }
     
     public void setHealth(int health) {

@@ -19,8 +19,10 @@ public class MyWorld extends World
     private int userTurn = 0;
     
     private User user = new User();
+    public HealthFrame userHealth = new HealthFrame(); 
     private Opponent opponent = new Opponent();
-    
+    public HealthFrame opponentHealth = new HealthFrame(); 
+
     public boolean castDone = false;
     
     private ArrayList<String> wands = new ArrayList<String>(Arrays.asList("Cypress", "Hazel", "Laurel", "Sycamore", "English Oak", "Hornbeam"));
@@ -41,6 +43,9 @@ public class MyWorld extends World
         addObject(new HealthFrame(), getWidth()-138, 70);
         addObject(user, 138, getHeight()/3 * 2); 
         addObject(opponent, getWidth()-138, getHeight()/3 * 2); 
+        addObject(userHealth, 138, 70);
+        addObject(opponentHealth, (getWidth()-138, 70));
+
     }
     
     public void act() {
@@ -133,5 +138,13 @@ public class MyWorld extends World
                 Greenfoot.ask("Not an option, please try again. Enter any key to continue.");
                 chooseWand();
         }
+    }
+
+    public HealthFrame getUserHealth() {
+        return userHealth; 
+    }
+
+    public HealthFrame getOpponentHealth() {
+        return opponentHealth; 
     }
 }

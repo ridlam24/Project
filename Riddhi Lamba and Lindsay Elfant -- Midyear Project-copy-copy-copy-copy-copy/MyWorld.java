@@ -44,7 +44,7 @@ public class MyWorld extends World
         addObject(user, 138, getHeight()/3 * 2); 
         addObject(opponent, getWidth()-138, getHeight()/3 * 2); 
         addObject(userHealth, 138, 70);
-        addObject(opponentHealth, (getWidth()-138, 70));
+        addObject(opponentHealth, getWidth()-138, 70);
 
     }
     

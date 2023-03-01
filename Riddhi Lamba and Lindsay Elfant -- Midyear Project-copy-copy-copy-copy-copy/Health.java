@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Health extends Actor
 {
+    private int originalWidth; 
     /**
      * Act - do whatever the Health wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -15,12 +16,13 @@ public class Health extends Actor
     public Health() {
         GreenfootImage image = getImage();
         image.scale(new HealthFrame().getImage().getWidth()-7, new HealthFrame().getImage().getHeight()-16);
+        originalWidth = image.getWidth(); 
         setImage(image);
     }
 
     public void changeHealthBar(int health) {
         GreenfootImage image = getImage(); 
-        int amount = (health/100)*image.getWidth(); 
+        int amount = (health/100)* originalWidth; 
     
         if (health > 0) {            
             image.scale(image.getWidth() + amount, image.getHeight());

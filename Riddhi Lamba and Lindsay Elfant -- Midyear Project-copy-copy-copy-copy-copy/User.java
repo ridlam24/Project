@@ -26,6 +26,7 @@ public class User extends Wizard
     }
     
     public void changeHealthBar(int health) {
-        (this.health).changeHealthBar(health);
+        ((MyWorld) getWorld()).getUserHealth().changeHealthBar(health); 
+       
     }
 }

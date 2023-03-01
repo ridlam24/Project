@@ -20,11 +20,14 @@ public class Health extends Actor
 
     public void changeHealthBar(int health) {
         GreenfootImage image = getImage(); 
-        if (health > 0) {
-            image.scale((health/100+1)*image.getWidth(),image.getHeight());
+        int amount = (health/100)*image.getWidth(); 
+    
+        if (health > 0) {            
+            image.scale(image.getWidth() + amount, image.getHeight());
         }
         else {
-            image.scale((health/100) * image.getWidth(), image.getHeight());
+            
+            image.scale(image.getWidth() - amount, image.getHeight()); 
         }
     }
 

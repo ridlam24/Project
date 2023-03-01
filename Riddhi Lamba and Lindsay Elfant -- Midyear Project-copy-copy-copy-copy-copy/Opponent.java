@@ -28,6 +28,6 @@ public class Opponent extends Wizard
     }
     
     public void changeHealthBar(int health) {
-        (this.health).changeHealthBar(health);
+        ((MyWorld) getWorld()).getOpponentHealth().changeHealthBar(health);
     }
 }

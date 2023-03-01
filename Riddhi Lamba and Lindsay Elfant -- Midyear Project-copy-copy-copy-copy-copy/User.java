@@ -8,7 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class User extends Wizard
 {
-    private Health health = new Health();
         
     public User() {
         
@@ -20,8 +19,6 @@ public class User extends Wizard
      */
     public void act()
     {   
-        ((MyWorld) getWorld()).addObject(health, 138, 70);
-        //this can't be in the act lol it needs to go in the user but how tf do i get it there ugh.
     }
     
     public void addWand() {

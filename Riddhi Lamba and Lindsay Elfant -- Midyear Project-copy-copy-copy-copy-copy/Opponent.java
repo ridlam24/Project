@@ -8,7 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Opponent extends Wizard
 {
-    private Health health = new Health();
     
     public Opponent() {
     }
@@ -19,8 +18,8 @@ public class Opponent extends Wizard
      */
     public void act()
     {
-        // Add your action code here.
-        ((MyWorld) getWorld()).addObject(health, ((MyWorld) getWorld()).getWidth()-138, 70);
+        
+        
     }
     
     public void addWand() {

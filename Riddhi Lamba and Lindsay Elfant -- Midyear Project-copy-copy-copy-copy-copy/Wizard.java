@@ -49,7 +49,7 @@ public abstract class Wizard extends Actor
         int index = spells.indexOf(spell);
         Spell cast = spellClass.get(index);
         changeHealth(cast.damage);
-        changeHealthBar(health);
+        getHealthBar().changeHealthBar(health);
         ((MyWorld) getWorld()).addObject(cast, wand.getX()+wand.getImage().getWidth(), wand.getY());
         for (int i = 0; i < 100; i ++) {
             cast.setLocation(cast.getX()+2, cast.getY()-1);
@@ -76,7 +76,7 @@ public abstract class Wizard extends Actor
         return health; 
     }
     
-    public abstract void changeHealthBar(int health);
+    public abstract Health getHealthBar();  
 
     /**
      * Act - do whatever the Wizard wants to do. This method is called whenever

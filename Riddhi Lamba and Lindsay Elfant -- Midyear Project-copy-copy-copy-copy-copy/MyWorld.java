@@ -19,9 +19,8 @@ public class MyWorld extends World
     private int userTurn = 0;
     
     private User user = new User();
-    public Health userHealth = new Health(); 
     private Opponent opponent = new Opponent();
-    public Health opponentHealth = new Health(); 
+    
 
     public boolean castDone = false;
     
@@ -43,8 +42,6 @@ public class MyWorld extends World
         addObject(new HealthFrame(), getWidth()-138, 70);
         addObject(user, 138, getHeight()/3 * 2); 
         addObject(opponent, getWidth()-138, getHeight()/3 * 2); 
-        addObject(userHealth, 138, 70);
-        addObject(opponentHealth, getWidth()-138, 70);
 
     }
     
@@ -140,11 +137,5 @@ public class MyWorld extends World
         }
     }
 
-    public Health getUserHealth() {
-        return userHealth; 
-    }
-
-    public Health getOpponentHealth() {
-        return opponentHealth; 
-    }
+    
 }

@@ -6,8 +6,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Opponent extends Wizard
-{
+public class Opponent extends Wizard {
+    private Health health = new Health(); 
     
     public Opponent() {
     }
@@ -26,9 +26,10 @@ public class Opponent extends Wizard
         wand.turn(-90);
         ((MyWorld) getWorld()).addObject(wand, getX()-getImage().getWidth(), getY()-getImage().getHeight()/2);
     }
-    
-    public void changeHealthBar(int health) {
-        ((MyWorld) getWorld()).getOpponentHealth().changeHealthBar(health);
 
+    public Health getHealthBar() {
+        return health; 
     }
+    
+    
 }

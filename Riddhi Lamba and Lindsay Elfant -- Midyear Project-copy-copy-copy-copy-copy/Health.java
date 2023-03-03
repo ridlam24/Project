@@ -28,7 +28,6 @@ public class Health extends Actor
             image.scale(image.getWidth() + amount, image.getHeight());
         }
         else {
-            
             image.scale(image.getWidth() - amount, image.getHeight()); 
         }
     }

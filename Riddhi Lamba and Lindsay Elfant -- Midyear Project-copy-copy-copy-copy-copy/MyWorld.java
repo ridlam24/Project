@@ -42,7 +42,8 @@ public class MyWorld extends World
         addObject(new HealthFrame(), getWidth()-138, 70);
         addObject(user, 138, getHeight()/3 * 2); 
         addObject(opponent, getWidth()-138, getHeight()/3 * 2); 
-
+        addObject(user.getHealthBar(), 138, 70);
+        addObject(opponent.getHealthBar(), getWidth()-138, 70);
     }
     
     public void act() {

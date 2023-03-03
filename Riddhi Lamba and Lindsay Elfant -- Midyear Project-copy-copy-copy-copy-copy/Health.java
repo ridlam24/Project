@@ -24,6 +24,7 @@ public class Health extends Actor
         GreenfootImage image = getImage(); 
         double amount = (damage/100.0)* originalWidth; 
         image.scale(image.getWidth() + (int) amount, image.getHeight()); 
+        image.setLocation(image.getX() + amount, image.getY()); 
         setImage(image);
     }
 

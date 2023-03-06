@@ -25,7 +25,15 @@ public class User extends Wizard {
         super.castSpell(spell);
         int index = spells.indexOf(spell);
         Spell cast = spellClass.get(index);
-        ((MyWorld) getWorld()).getOpponent().getHealthBar().changeHealthBar(cast.damage);
+        if (cast.damage > 0) {
+            changeHealth(cast.damage);
+            getHealthBar().changeHealthBar(cast.damage);
+        }
+        
+        else {
+            ((MyWorld) getWorld()).getOpponent().changeHealth(cast.damage);
+            ((MyWorld) getWorld()).getOpponent().getHealthBar().changeHealthBar(cast.damage);
+        }
     }
     
     public void addWand() {

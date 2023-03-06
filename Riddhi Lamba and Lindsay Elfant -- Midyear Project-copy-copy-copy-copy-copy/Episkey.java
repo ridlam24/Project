@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Episkey extends Defensive
 {
     public Episkey() {
-        setDamage(-15);
+        setDamage(15);
         getImage().scale(getImage().getWidth()/5, getImage().getHeight()/5);
     }
     

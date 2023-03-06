@@ -9,8 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Protego extends Defensive
 {
     public Protego() {
-        setDamage(-15);
-        getImage().scale(getImage().getWidth()/5, getImage().getHeight()/5);
+        setDamage(15);
+        getImage().scale(getImage().getWidth()/8, getImage().getHeight()/8);
     }
     
     /**

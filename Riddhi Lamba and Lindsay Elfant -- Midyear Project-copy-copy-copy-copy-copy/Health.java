@@ -25,7 +25,7 @@ public class Health extends Actor
         double amount = (damage/100.0)* originalWidth; 
         double newWidth = image.getWidth + (int) amount; 
         if (newWidth <= 0) {
-            image.scale(0, 0); 
+            image.scale(1, image.getHeight()); 
         }
         else if(newWidth >= originalWidth) {
             image.scale(originalWidth, image.getHeight()); 

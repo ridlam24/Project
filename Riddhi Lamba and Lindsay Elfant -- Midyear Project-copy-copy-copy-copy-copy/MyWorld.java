@@ -61,11 +61,11 @@ public class MyWorld extends World
             userTurn = 1;
         }
 
-        //else {
-           // int num = Greenfoot.getRandomNumber(6); 
-            //opponent.castSpell(spells.get(num));
-           // userTurn = 0;
-       // }
+        else {
+           int num = Greenfoot.getRandomNumber(6); 
+            opponent.castSpell(spells.get(num));
+           userTurn = 0;
+       }
     }
     
     public void imageSetup() {

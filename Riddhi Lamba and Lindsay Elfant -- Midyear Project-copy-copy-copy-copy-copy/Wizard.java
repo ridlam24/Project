@@ -48,14 +48,32 @@ public abstract class Wizard extends Actor
     public void castSpell(String spell) {
         int index = spells.indexOf(spell);
         Spell cast = spellClass.get(index);
-        ((MyWorld) getWorld()).addObject(cast, wand.getX()+wand.getImage().getWidth(), wand.getY());
+        if (this instanceof Opponent) {
+            ((MyWorld) getWorld()).addObject(cast, wand.getX()-wand.getImage().getWidth(), wand.getY());
+        }
+        else {
+            ((MyWorld) getWorld()).addObject(cast, wand.getX()+wand.getImage().getWidth(), wand.getY());
+        }
+        
         for (int i = 0; i < 100; i ++) {
-            cast.setLocation(cast.getX()+2, cast.getY()-1);
-            Greenfoot.delay(1);
+            if (this instanceof Opponent) {
+                cast.setLocation(cast.getX()-2, cast.getY()-1);
+                Greenfoot.delay(1);
+            }
+            else {
+                cast.setLocation(cast.getX()+2, cast.getY()-1);
+                Greenfoot.delay(1);
+            }
         }
         for (int i = 0; i < 100; i ++) {
-            cast.setLocation(cast.getX()+2, cast.getY()+1);
-            Greenfoot.delay(1);
+            if (this instanceof Opponent) {
+                cast.setLocation(cast.getX()-2, cast.getY()+1);
+                Greenfoot.delay(1);
+            }
+            else {   
+                cast.setLocation(cast.getX()+2, cast.getY()+1);
+                Greenfoot.delay(1);
+            }
         }
         ((MyWorld) getWorld()).removeObject(cast);
         GreenfootSound sound = new GreenfootSound("au.wav");

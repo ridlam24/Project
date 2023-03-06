@@ -18,8 +18,8 @@ public class MyWorld extends World
 
     private int userTurn = 0;
     
-    private User user = new User();
-    private Opponent opponent = new Opponent();
+    public User user = new User();
+    public Opponent opponent = new Opponent();
     
 
     public boolean castDone = false;
@@ -137,6 +137,13 @@ public class MyWorld extends World
                 chooseWand();
         }
     }
-
+    
+    public Opponent getOpponent() {
+        return opponent;
+    }
+    
+    public User getUser() {
+        return user;
+    }
     
 }

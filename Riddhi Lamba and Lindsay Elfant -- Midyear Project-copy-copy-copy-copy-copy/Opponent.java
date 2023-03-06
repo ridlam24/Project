@@ -22,6 +22,13 @@ public class Opponent extends Wizard {
         
     }
     
+    public void castSpell(String spell) {
+        super.castSpell(spell);
+        int index = spells.indexOf(spell);
+        Spell cast = spellClass.get(index);
+        ((MyWorld) getWorld()).getUser().getHealthBar().changeHealthBar(cast.damage);
+    }
+    
     public void addWand() {
         wand.turn(-90);
         ((MyWorld) getWorld()).addObject(wand, getX()-getImage().getWidth(), getY()-getImage().getHeight()/2);

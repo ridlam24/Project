@@ -26,7 +26,15 @@ public class Opponent extends Wizard {
         super.castSpell(spell);
         int index = spells.indexOf(spell);
         Spell cast = spellClass.get(index);
-        ((MyWorld) getWorld()).getUser().getHealthBar().changeHealthBar(cast.damage);
+        if (cast.damage > 0) {
+            changeHealth(cast.damage);
+            getHealthBar().changeHealthBar(cast.damage);
+        }
+        
+        else {
+            ((MyWorld) getWorld()).getUser().changeHealth(cast.damage);
+            ((MyWorld) getWorld()).getUser().getHealthBar().changeHealthBar(cast.damage);
+        }
     }
     
     public void addWand() {

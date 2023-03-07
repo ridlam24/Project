@@ -26,18 +26,21 @@ public class Health extends Actor
         double newWidth = image.getWidth() + (int) amount; 
         if (newWidth <= 0) {
             image.scale(1, image.getHeight()); 
+            setImage(image);
+
             return 0; 
         }
         else if(newWidth >= originalWidth) {
             image.scale(originalWidth, image.getHeight()); 
+            setImage(image);
             return 1; 
         }
         else {
             image.scale(image.getWidth() + (int) amount, image.getHeight()); 
+            setImage(image);
             return 1; 
 
         }
-        setImage(image);
     }
 
     public void act()

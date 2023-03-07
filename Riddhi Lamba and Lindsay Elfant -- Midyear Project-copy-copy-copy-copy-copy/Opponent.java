@@ -33,7 +33,10 @@ public class Opponent extends Wizard {
         
         else {
             ((MyWorld) getWorld()).getUser().changeHealth(cast.damage);
-            ((MyWorld) getWorld()).getUser().getHealthBar().changeHealthBar(cast.damage);
+            int ret = ((MyWorld) getWorld()).getUser().getHealthBar().changeHealthBar(cast.damage);
+            if (ret == 0) {
+                Greenfoot.stop(); 
+            }
         }
     }
     

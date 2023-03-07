@@ -34,7 +34,7 @@ public class User extends Wizard {
             ((MyWorld) getWorld()).getOpponent().changeHealth(cast.damage);
             int ret = ((MyWorld) getWorld()).getOpponent().getHealthBar().changeHealthBar(cast.damage);
             if (ret == 0) {
-                Greenfoot.showText("You Win! :)", ((MyWorld) getWorld()).getWidth()/2, ((MyWorld) getWorld()).getHeight()/2);
+                ((MyWorld) getWorld()).showText("You Win! :)", ((MyWorld) getWorld()).getWidth()/2, ((MyWorld) getWorld()).getHeight()/2);
                 Greenfoot.stop(); 
             }
         }

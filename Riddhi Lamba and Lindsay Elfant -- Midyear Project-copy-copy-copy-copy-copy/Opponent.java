@@ -35,6 +35,7 @@ public class Opponent extends Wizard {
             ((MyWorld) getWorld()).getUser().changeHealth(cast.damage);
             int ret = ((MyWorld) getWorld()).getUser().getHealthBar().changeHealthBar(cast.damage);
             if (ret == 0) {
+                Greenfoot.showText("You Lose :(", ((MyWorld) getWorld()).getWidth()/2, ((MyWorld) getWorld()).getHeight()/2);
                 Greenfoot.stop(); 
             }
         }

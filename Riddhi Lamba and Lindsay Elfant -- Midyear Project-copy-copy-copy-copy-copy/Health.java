@@ -27,7 +27,6 @@ public class Health extends Actor
         if (newWidth <= 0) {
             image.scale(1, image.getHeight()); 
             setImage(image);
-
             return 0; 
         }
         else if(newWidth >= originalWidth) {

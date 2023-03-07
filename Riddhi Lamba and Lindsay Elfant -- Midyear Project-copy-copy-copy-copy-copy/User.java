@@ -32,8 +32,12 @@ public class User extends Wizard {
         
         else {
             ((MyWorld) getWorld()).getOpponent().changeHealth(cast.damage);
-            ((MyWorld) getWorld()).getOpponent().getHealthBar().changeHealthBar(cast.damage);
+            int ret = ((MyWorld) getWorld()).getOpponent().getHealthBar().changeHealthBar(cast.damage);
+            if (ret == 0) {
+                Greenfoot.stop(); 
+            }
         }
+        
     }
     
     public void addWand() {

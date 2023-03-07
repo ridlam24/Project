@@ -10,7 +10,7 @@ public class Protego extends Defensive
 {
     public Protego() {
         setDamage(15);
-        getImage().scale(getImage().getWidth()/8, getImage().getHeight()/8);
+        getImage().scale(getImage().getWidth()/12, getImage().getHeight()/12);
     }
     
     /**

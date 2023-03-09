@@ -27,12 +27,12 @@ public class User extends Wizard {
         Spell cast = spellClass.get(index);
         if (cast.damage > 0) {
             changeHealth(cast.damage);
-            getHealthBar().changeHealthBar(cast.damage);
+            getHealthBar().changeHealthBar(cast.damage, this);
         }
         
         else {
             ((MyWorld) getWorld()).getOpponent().changeHealth(cast.damage);
-            int ret = ((MyWorld) getWorld()).getOpponent().getHealthBar().changeHealthBar(cast.damage);
+            int ret = ((MyWorld) getWorld()).getOpponent().getHealthBar().changeHealthBar(cast.damage, this);
             if (ret == 0) {
                 ((MyWorld) getWorld()).showText("You Win! :)", ((MyWorld) getWorld()).getWidth()/2, ((MyWorld) getWorld()).getHeight()/2);
                 Greenfoot.stop(); 

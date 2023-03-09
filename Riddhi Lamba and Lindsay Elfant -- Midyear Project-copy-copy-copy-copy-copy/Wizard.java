@@ -54,26 +54,15 @@ public abstract class Wizard extends Actor
         else {
             ((MyWorld) getWorld()).addObject(cast, wand.getX()+wand.getImage().getWidth(), wand.getY());
         }
-        
-        for (int i = 0; i < 100; i ++) {
-            if (this instanceof Opponent) {
-                cast.setLocation(cast.getX()-2, cast.getY()-1);
-                Greenfoot.delay(1);
-            }
-            else {
-                cast.setLocation(cast.getX()+2, cast.getY()-1);
-                Greenfoot.delay(1);
-            }
+        for (int i = 0; i < 6; i ++) {
+            GreenfootImage image = cast.getImage();
+            image.scale(image.getWidth()+10, image.getHeight()+10);
+            Greenfoot.delay(5);
         }
-        for (int i = 0; i < 100; i ++) {
-            if (this instanceof Opponent) {
-                cast.setLocation(cast.getX()-2, cast.getY()+1);
-                Greenfoot.delay(1);
-            }
-            else {   
-                cast.setLocation(cast.getX()+2, cast.getY()+1);
-                Greenfoot.delay(1);
-            }
+        for (int i = 0; i < 6; i ++) {
+            GreenfootImage image = cast.getImage();
+            image.scale(image.getWidth()-10, image.getHeight()-10);
+            Greenfoot.delay(5);
         }
         ((MyWorld) getWorld()).removeObject(cast);
         GreenfootSound sound = new GreenfootSound("au.wav");

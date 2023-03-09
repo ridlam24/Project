@@ -20,13 +20,12 @@ public class Health extends Actor
         setImage(image);
     }
 
-    public int changeHealthBar(int damage) {
+    public int changeHealthBar(int damage, Wizard w) {
         GreenfootImage image = getImage(); 
         double amount = (damage/100.0)* originalWidth; 
         double newWidth = image.getWidth() + (int) amount; 
         if (newWidth <= 0) {
-            image.scale(1, image.getHeight()); 
-            setImage(image);
+            ((MyWorld) getWorld()).removeObject(this);
             return 0; 
         }
         else if(newWidth >= originalWidth) {
@@ -37,8 +36,23 @@ public class Health extends Actor
         else {
             image.scale(image.getWidth() + (int) amount, image.getHeight()); 
             setImage(image);
-            return 1; 
-
+            if (w instanceof Opponent) {
+                if (amount < 0) {
+                    move(-1*(int)amount/2);
+                }
+             else {
+                 move((int)amount/2); 
+             }
+            }
+            else {
+                if (amount < 0) {
+                    move((int)amount/2);
+                }
+             else {
+                 move(-1*(int)amount/2); 
+             }
+            }
+            return 1;
         }
     }
 

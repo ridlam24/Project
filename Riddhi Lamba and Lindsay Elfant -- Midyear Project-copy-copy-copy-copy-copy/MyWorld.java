@@ -62,9 +62,31 @@ public class MyWorld extends World
         }
 
         else {
-           int num = Greenfoot.getRandomNumber(6); 
-            opponent.castSpell(spells.get(num));
-           userTurn = 0;
+            if (opponent.getHealth() < 50) {
+                int defenseChance = Greenfoot.getRandomNumber(5);
+                int spell;
+                if (defenseChance < 3) {
+                    spell = Greenfoot.getRandomNumber(3);
+                }
+                
+                else {
+                    spell = Greenfoot.getRandomNumber(3)+3;
+                }
+                opponent.castSpell(spells.get(spell));
+            }
+            
+            else {
+                int offenseChance = Greenfoot.getRandomNumber(7);
+                int oSpell;
+                if (offenseChance < 5) {
+                    oSpell = Greenfoot.getRandomNumber(3)+3;
+                }
+                else {
+                    oSpell = Greenfoot.getRandomNumber(3);
+                }
+                opponent.castSpell(spells.get(oSpell));
+            }
+            userTurn = 0;
        }
     }
     

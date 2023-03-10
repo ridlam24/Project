@@ -9,7 +9,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Sectumsempra extends Offensive
 {
     public Sectumsempra() {
-        setDamage(-15);
+        int random = Greenfoot.getRandomNumber(2); 
+        int damage = -8; 
+        if (random == 0) {
+            damage = -22; 
+        }
+        setDamage(damage);
         getImage().scale(getImage().getWidth()/5, getImage().getHeight()/5);
     }
     

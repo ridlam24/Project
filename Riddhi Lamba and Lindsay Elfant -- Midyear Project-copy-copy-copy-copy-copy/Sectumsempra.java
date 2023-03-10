@@ -10,9 +10,9 @@ public class Sectumsempra extends Offensive
 {
     public Sectumsempra() {
         int random = Greenfoot.getRandomNumber(2); 
-        int damage = -8; 
+        int damage = -1; 
         if (random == 0) {
-            damage = -22; 
+            damage = -25; 
         }
         setDamage(damage);
         getImage().scale(getImage().getWidth()/5, getImage().getHeight()/5);

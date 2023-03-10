@@ -38,10 +38,10 @@ public class Health extends Actor
             setImage(image);
             if (w instanceof Opponent) {
                 if (amount < 0) {
-                    move((int)amount/2);
+                    move(-1*(int)amount/2);
                 }
              else {
-                 move((int)amount/2); 
+                 move(-1*(int)amount/2); 
              }
             }
             else {

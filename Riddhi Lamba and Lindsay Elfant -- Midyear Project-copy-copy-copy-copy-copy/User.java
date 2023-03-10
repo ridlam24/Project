@@ -25,14 +25,16 @@ public class User extends Wizard {
         super.castSpell(spell);
         int index = spells.indexOf(spell);
         Spell cast = spellClass.get(index);
-        if (cast.damage > 0) {
-            changeHealth(cast.damage);
-            getHealthBar().changeHealthBar(cast.damage, this);
+        int damage = cast.randomDamage();
+
+        if (damage > 0) {
+            changeHealth(damage);
+            getHealthBar().changeHealthBar(damage, this);
         }
         
         else {
-            ((MyWorld) getWorld()).getOpponent().changeHealth(cast.damage);
-            int ret = ((MyWorld) getWorld()).getOpponent().getHealthBar().changeHealthBar(cast.damage, this);
+            ((MyWorld) getWorld()).getOpponent().changeHealth(damage);
+            int ret = ((MyWorld) getWorld()).getOpponent().getHealthBar().changeHealthBar(damage, ((MyWorld) getWorld()).getOpponent());
             if (ret == 0) {
                 ((MyWorld) getWorld()).showText("You Win! :)", ((MyWorld) getWorld()).getWidth()/2, ((MyWorld) getWorld()).getHeight()/2);
                 Greenfoot.stop(); 

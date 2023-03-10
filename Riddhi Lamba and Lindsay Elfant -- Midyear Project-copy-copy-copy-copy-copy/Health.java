@@ -31,26 +31,22 @@ public class Health extends Actor
         else if(newWidth >= originalWidth) {
             image.scale(originalWidth, image.getHeight()); 
             setImage(image);
+            if (w instanceof Opponent) {
+                setLocation(((MyWorld)getWorld()).getWidth()-138, 70);
+            }
+            else {
+                setLocation(138, 70);
+            }
             return 1; 
         }
         else {
             image.scale(image.getWidth() + (int) amount, image.getHeight()); 
             setImage(image);
             if (w instanceof Opponent) {
-                if (amount < 0) {
-                    move(-1*(int)amount/2);
-                }
-             else {
-                 move(-1*(int)amount/2); 
-             }
+                move(-1*(int)amount/2); 
             }
             else {
-                if (amount < 0) {
-                    move((int)amount/2);
-                }
-             else {
-                 move((int)amount/2); 
-             }
+                move((int)amount/2); 
             }
             return 1;
         }

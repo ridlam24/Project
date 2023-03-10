@@ -21,4 +21,8 @@ public class Expelliarmus extends Offensive
     {
         // Add your action code here.
     }
+
+    public int randomDamage() {
+        return damage; 
+    }
 }

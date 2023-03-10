@@ -21,4 +21,8 @@ public class Protego extends Defensive
     {
         // Add your action code here.
     }
+
+    public int getRandomNumber() {
+        return damage; 
+    }
 }

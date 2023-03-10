@@ -8,4 +8,6 @@ comment2.params=d
 comment2.target=void\ setDamage(int)
 comment3.params=
 comment3.target=boolean\ touching()
-numComments=4
+comment4.params=
+comment4.target=int\ randomDamage()
+numComments=5

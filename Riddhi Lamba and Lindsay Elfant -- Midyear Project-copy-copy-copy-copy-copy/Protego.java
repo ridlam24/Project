@@ -25,4 +25,8 @@ public class Protego extends Defensive
     public int getRandomNumber() {
         return damage; 
     }
+    
+    public int randomDamage() {
+        return damage; 
+    }
 }

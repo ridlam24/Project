@@ -22,4 +22,14 @@ public class Sectumsempra extends Offensive
     {
         // Add your action code here.
     }
+
+    public int randomDamage() {
+        int random = Greenfoot.getRandomNumber(3); 
+        if (random == 0) {
+            return -22; 
+        }
+        else {
+            return -5; 
+        }
+    }
 }

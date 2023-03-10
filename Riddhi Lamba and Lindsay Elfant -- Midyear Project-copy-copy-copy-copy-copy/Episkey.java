@@ -21,4 +21,8 @@ public class Episkey extends Defensive
     {
         // Add your action code here.
     }
+
+    public int randomDamage() {
+        return damage; 
+    }
 }

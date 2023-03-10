@@ -25,4 +25,6 @@ public abstract class Spell extends Actor
     public boolean touching() {
         return isTouching(Wand.class);
     }
+
+    public abstract int randomDamage();
 }

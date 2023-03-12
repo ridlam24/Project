@@ -50,6 +50,8 @@ public class Opponent extends Wizard {
                 ((MyWorld)getWorld()).showText("", 905, 30);
                 ((MyWorld)getWorld()).addObject(new Screen(), ((MyWorld)getWorld()).getWidth()/2, ((MyWorld)getWorld()).getHeight()/2);
                 ((MyWorld) getWorld()).showText("You Lose :(", ((MyWorld) getWorld()).getWidth()/2, ((MyWorld) getWorld()).getHeight()/2);
+                GreenfootSound lost = new GreenfootSound("gameover.mp3");
+                lost.play();
                 Greenfoot.stop(); 
             }
         }

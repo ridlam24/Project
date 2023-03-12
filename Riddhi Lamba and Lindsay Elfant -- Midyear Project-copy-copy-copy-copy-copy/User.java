@@ -50,6 +50,8 @@ public class User extends Wizard {
                 ((MyWorld)getWorld()).showText("", 905, 30);
                 ((MyWorld)getWorld()).addObject(new Screen(), ((MyWorld)getWorld()).getWidth()/2, ((MyWorld)getWorld()).getHeight()/2);
                 ((MyWorld) getWorld()).showText("You Win! :)", ((MyWorld) getWorld()).getWidth()/2, ((MyWorld) getWorld()).getHeight()/2);
+                GreenfootSound win = new GreenfootSound("win.mp3");
+                win.play();
                 Greenfoot.stop(); 
             }
         }

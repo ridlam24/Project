@@ -27,6 +27,7 @@ public class MyWorld extends World
     private ArrayList<String> wands = new ArrayList<String>(Arrays.asList("Cypress", "Hazel", "Laurel", "Sycamore", "English Oak", "Hornbeam"));
     private ArrayList<String> spells = new ArrayList<String>(Arrays.asList("Episkey", "Protego", "Salvio Hexia", "Expelliarmus", "Sectumsempra", "Stupefy"));
     
+    private int time = 0;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -47,6 +48,10 @@ public class MyWorld extends World
     }
     
     public void act() {
+        if (time == 0) {
+           GreenfootSound music = new GreenfootSound("duelmusic.mp3");
+            music.play(); 
+        }
         if (currentWand.equals("")) {
             chooseWand(); 
             user.chooseWand(currentWand);
@@ -88,6 +93,7 @@ public class MyWorld extends World
             }
             userTurn = 0;
        }
+       time++;
     }
     
     public void imageSetup() {

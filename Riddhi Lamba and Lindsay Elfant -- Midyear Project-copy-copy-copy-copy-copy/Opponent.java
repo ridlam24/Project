@@ -29,6 +29,9 @@ public class Opponent extends Wizard {
         int damage = cast.randomDamage();
         if (damage > 0) {
             changeHealth(damage);
+            if (getHealth() > 100) {
+                setHealth(100);
+            }
             getHealthBar().changeHealthBar(damage, this);
             ((MyWorld)getWorld()).showText("+"+damage, ((MyWorld)getWorld()).getWidth()-100, 125);
         }

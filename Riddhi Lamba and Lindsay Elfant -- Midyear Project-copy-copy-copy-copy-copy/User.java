@@ -29,6 +29,9 @@ public class User extends Wizard {
 
         if (damage > 0) {
             changeHealth(damage);
+            if (getHealth() > 100) {
+                setHealth(100);
+            }
             getHealthBar().changeHealthBar(damage, this);
             ((MyWorld)getWorld()).showText("+"+damage, 100, 125);
         }

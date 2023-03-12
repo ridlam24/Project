@@ -46,6 +46,9 @@ public class Opponent extends Wizard {
             int ret = ((MyWorld) getWorld()).getUser().getHealthBar().changeHealthBar(damage, ((MyWorld) getWorld()).getUser());
             ((MyWorld)getWorld()).showText(""+damage, 100, 125);
             if (ret == 0) {
+                ((MyWorld)getWorld()).showText("", 75, 30);
+                ((MyWorld)getWorld()).showText("", 905, 30);
+                ((MyWorld)getWorld()).addObject(new Screen(), ((MyWorld)getWorld()).getWidth()/2, ((MyWorld)getWorld()).getHeight()/2);
                 ((MyWorld) getWorld()).showText("You Lose :(", ((MyWorld) getWorld()).getWidth()/2, ((MyWorld) getWorld()).getHeight()/2);
                 Greenfoot.stop(); 
             }
@@ -56,7 +59,7 @@ public class Opponent extends Wizard {
     }
     
     public void addWand() {
-        wand.turn(-120);
+        wand.turn(-115);
         ((MyWorld) getWorld()).addObject(wand, getX()-155, getY()-75);
     }
 

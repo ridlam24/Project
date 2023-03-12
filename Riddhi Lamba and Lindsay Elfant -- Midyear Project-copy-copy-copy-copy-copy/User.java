@@ -46,6 +46,9 @@ public class User extends Wizard {
             int ret = ((MyWorld) getWorld()).getOpponent().getHealthBar().changeHealthBar(damage, ((MyWorld) getWorld()).getOpponent());
             ((MyWorld)getWorld()).showText(""+damage, ((MyWorld)getWorld()).getWidth()-100, 125);
             if (ret == 0) {
+                ((MyWorld)getWorld()).showText("", 75, 30);
+                ((MyWorld)getWorld()).showText("", 905, 30);
+                ((MyWorld)getWorld()).addObject(new Screen(), ((MyWorld)getWorld()).getWidth()/2, ((MyWorld)getWorld()).getHeight()/2);
                 ((MyWorld) getWorld()).showText("You Win! :)", ((MyWorld) getWorld()).getWidth()/2, ((MyWorld) getWorld()).getHeight()/2);
                 Greenfoot.stop(); 
             }

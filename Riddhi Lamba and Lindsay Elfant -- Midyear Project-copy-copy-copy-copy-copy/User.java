@@ -42,7 +42,7 @@ public class User extends Wizard {
                 Greenfoot.stop(); 
             }
         }
-        Greenfoot.delay(15);
+        Greenfoot.delay(20);
         ((MyWorld)getWorld()).showText("", 100, 125);
         ((MyWorld)getWorld()).showText("", ((MyWorld)getWorld()).getWidth()-100, 125);
     }

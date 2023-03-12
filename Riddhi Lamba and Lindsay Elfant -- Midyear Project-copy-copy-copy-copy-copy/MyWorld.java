@@ -45,12 +45,14 @@ public class MyWorld extends World
         addObject(opponent, getWidth()-165, getHeight()/2+50); 
         addObject(user.getHealthBar(), 138, 70);
         addObject(opponent.getHealthBar(), getWidth()-138, 70);
+        showText("HP: Mortal Kombat", getWidth()/2, getHeight()/2);
     }
     
     public void act() {
         if (time == 0) {
            GreenfootSound music = new GreenfootSound("duelmusic.mp3");
             music.play(); 
+            showText("", getWidth()/2, getHeight()/2);
         }
         if (currentWand.equals("")) {
             chooseWand(); 

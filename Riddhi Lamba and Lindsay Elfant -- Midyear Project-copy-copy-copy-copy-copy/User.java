@@ -30,17 +30,21 @@ public class User extends Wizard {
         if (damage > 0) {
             changeHealth(damage);
             getHealthBar().changeHealthBar(damage, this);
+            ((MyWorld)getWorld()).showText("+"+damage, 100, 125);
         }
         
         else {
             ((MyWorld) getWorld()).getOpponent().changeHealth(damage);
             int ret = ((MyWorld) getWorld()).getOpponent().getHealthBar().changeHealthBar(damage, ((MyWorld) getWorld()).getOpponent());
+            ((MyWorld)getWorld()).showText(""+damage, ((MyWorld)getWorld()).getWidth()-100, 125);
             if (ret == 0) {
                 ((MyWorld) getWorld()).showText("You Win! :)", ((MyWorld) getWorld()).getWidth()/2, ((MyWorld) getWorld()).getHeight()/2);
                 Greenfoot.stop(); 
             }
         }
-        
+        Greenfoot.delay(15);
+        ((MyWorld)getWorld()).showText("", 100, 125);
+        ((MyWorld)getWorld()).showText("", ((MyWorld)getWorld()).getWidth()-100, 125);
     }
     
     public void addWand() {

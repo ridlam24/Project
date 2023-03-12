@@ -112,11 +112,19 @@ dependency8.type=UsesDependency
 dependency9.from=Wizard
 dependency9.to=Wand
 dependency9.type=UsesDependency
+<<<<<<< HEAD
 editor.fx.0.height=737
 editor.fx.0.width=814
 editor.fx.0.x=232
 editor.fx.0.y=-22
 height=686
+=======
+editor.fx.0.height=735
+editor.fx.0.width=813
+editor.fx.0.x=313
+editor.fx.0.y=39
+height=865
+>>>>>>> 1a07db7d35fa7c6da6d4809d86926fe0dfd07d78
 package.numDependencies=32
 package.numTargets=25
 project.charset=windows-1252

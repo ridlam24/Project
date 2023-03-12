@@ -23,6 +23,7 @@ public class Stupefy extends Offensive
     }
 
     public int randomDamage() {
-        return damage; 
+        int random = -1 * (1 + Greenfoot.getRandomNumber(18)); 
+        return random; 
     }
 }

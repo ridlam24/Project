@@ -27,6 +27,8 @@ public class MyWorld extends World
     private ArrayList<String> wands = new ArrayList<String>(Arrays.asList("Cypress", "Hazel", "Laurel", "Sycamore", "English Oak", "Hornbeam"));
     private ArrayList<String> spells = new ArrayList<String>(Arrays.asList("Episkey", "Protego", "Salvio Hexia", "Expelliarmus", "Sectumsempra", "Stupefy"));
     
+    private Logo logo = new Logo();
+    private Screen open = new Screen();
     private int time = 0;
     /**
      * Constructor for objects of class MyWorld.
@@ -37,22 +39,25 @@ public class MyWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1000, 500, 1); 
         imageSetup();
-        showText("Your Health: ", 75, 30);
-        showText("Opponent Health: ", 905, 30);
         addObject(new HealthFrame(), 138, 70);
         addObject(new HealthFrame(), getWidth()-138, 70);
         addObject(user, 165, getHeight()/2+50); 
         addObject(opponent, getWidth()-165, getHeight()/2+50); 
         addObject(user.getHealthBar(), 138, 70);
         addObject(opponent.getHealthBar(), getWidth()-138, 70);
-        showText("HP: Mortal Kombat", getWidth()/2, getHeight()/2);
+        addObject(open, getWidth()/2, getHeight()/2);
+        addObject(logo, getWidth()/2, getHeight()/2);
     }
     
     public void act() {
         if (time == 0) {
+            removeObject(logo);
+            removeObject(open);
+            showText("Your Health: ", 75, 30);
+            showText("Opponent Health: ", 905, 30);
            GreenfootSound music = new GreenfootSound("duelmusic.mp3");
             music.playLoop(); 
-            showText("", getWidth()/2, getHeight()/2);
+            Greenfoot.delay(15);
         }
         if (currentWand.equals("")) {
             chooseWand(); 

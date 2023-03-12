@@ -23,6 +23,7 @@ public class SalvioHexia extends Defensive
     }
 
     public int randomDamage() {
-        return damage; 
+        int random = 1 + Greenfoot.getRandomNumber(18); 
+        return random; 
     }
 }

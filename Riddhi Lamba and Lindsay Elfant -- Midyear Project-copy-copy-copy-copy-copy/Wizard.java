@@ -49,10 +49,10 @@ public abstract class Wizard extends Actor
         int index = spells.indexOf(spell);
         Spell cast = spellClass.get(index);
         if (this instanceof Opponent) {
-            ((MyWorld) getWorld()).addObject(cast, wand.getX()-wand.getImage().getWidth(), wand.getY());
+            ((MyWorld) getWorld()).addObject(cast, wand.getX()-wand.getImage().getWidth()/2, wand.getY());
         }
         else {
-            ((MyWorld) getWorld()).addObject(cast, wand.getX()+wand.getImage().getWidth(), wand.getY());
+            ((MyWorld) getWorld()).addObject(cast, wand.getX()+wand.getImage().getWidth()/2, wand.getY());
         }
         if (cast instanceof Defensive) {
             for (int i = 0; i < 6; i ++) {

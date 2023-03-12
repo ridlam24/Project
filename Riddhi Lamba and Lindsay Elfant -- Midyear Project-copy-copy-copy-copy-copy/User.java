@@ -44,7 +44,8 @@ public class User extends Wizard {
     }
     
     public void addWand() {
-        ((MyWorld) getWorld()).addObject(wand, getX()+getImage().getWidth(), getY()-getImage().getHeight()/2);
+        wand.turn(75);
+        ((MyWorld) getWorld()).addObject(wand, getX()+33, getY()-getImage().getHeight()+203);
     }
     
     public Health getHealthBar() {

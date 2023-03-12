@@ -43,8 +43,8 @@ public class Opponent extends Wizard {
     }
     
     public void addWand() {
-        wand.turn(-90);
-        ((MyWorld) getWorld()).addObject(wand, getX()-getImage().getWidth(), getY()-getImage().getHeight()/2);
+        wand.turn(-120);
+        ((MyWorld) getWorld()).addObject(wand, getX()-155, getY()-75);
     }
 
     public Health getHealthBar() {

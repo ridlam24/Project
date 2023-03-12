@@ -29,11 +29,12 @@ public class Protego extends Defensive
     public int randomDamage() {
         int random = Greenfoot.getRandomNumber(3); 
         if (random == 0) {
+            return -15; 
+        } else {
             return 22; 
         }
-        else {
-            return 5; 
-        }
+        
+        
     }
 
 }

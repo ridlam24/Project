@@ -51,7 +51,7 @@ public class MyWorld extends World
     public void act() {
         if (time == 0) {
            GreenfootSound music = new GreenfootSound("duelmusic.mp3");
-            music.play(); 
+            music.playLoop(); 
             showText("", getWidth()/2, getHeight()/2);
         }
         if (currentWand.equals("")) {

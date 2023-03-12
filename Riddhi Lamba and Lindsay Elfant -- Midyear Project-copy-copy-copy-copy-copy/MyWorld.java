@@ -62,7 +62,7 @@ public class MyWorld extends World
         }
 
         else {
-            if (opponent.getHealth() < 50) {
+            if (opponent.getHealth() < user.getHealth()) {
                 int defenseChance = Greenfoot.getRandomNumber(5);
                 int spell;
                 if (defenseChance < 3) {

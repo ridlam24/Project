@@ -33,8 +33,6 @@ public class Protego extends Defensive
         } else {
             return 22; 
         }
-        
-        
     }
 
 }

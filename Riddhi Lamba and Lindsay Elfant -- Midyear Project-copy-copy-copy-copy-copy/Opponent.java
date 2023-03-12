@@ -27,13 +27,18 @@ public class Opponent extends Wizard {
         int index = spells.indexOf(spell);
         Spell cast = spellClass.get(index);
         int damage = cast.randomDamage();
-        if (damage > 0) {
+        if (cast instanceof Defensive) {
             changeHealth(damage);
             if (getHealth() > 100) {
                 setHealth(100);
             }
             getHealthBar().changeHealthBar(damage, this);
-            ((MyWorld)getWorld()).showText("+"+damage, ((MyWorld)getWorld()).getWidth()-100, 125);
+            if (damage > 0) {
+                ((MyWorld)getWorld()).showText("+"+damage, ((MyWorld)getWorld()).getWidth()-100, 125);
+            }
+            else {
+                ((MyWorld)getWorld()).showText("Backfire!: "+damage, ((MyWorld)getWorld()).getWidth()-100, 125);
+            }
         }
         
         else {

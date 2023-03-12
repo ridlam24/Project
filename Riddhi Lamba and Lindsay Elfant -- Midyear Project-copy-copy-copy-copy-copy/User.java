@@ -27,13 +27,18 @@ public class User extends Wizard {
         Spell cast = spellClass.get(index);
         int damage = cast.randomDamage();
 
-        if (damage > 0) {
+        if (cast instanceof Defensive) {
             changeHealth(damage);
             if (getHealth() > 100) {
                 setHealth(100);
             }
             getHealthBar().changeHealthBar(damage, this);
-            ((MyWorld)getWorld()).showText("+"+damage, 100, 125);
+            if (damage > 0) {
+                ((MyWorld)getWorld()).showText("+"+damage, 100, 125);
+            }
+            else {
+                ((MyWorld)getWorld()).showText("Backfire!: "+damage, 100, 125);
+            }
         }
         
         else {

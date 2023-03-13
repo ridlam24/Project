@@ -72,21 +72,21 @@ public abstract class Wizard extends Actor
         else {
             for (int i = 0; i < 30; i ++) {
                 if (this instanceof Opponent) {
-                    cast.setLocation(cast.getX()-5, cast.getY()-4);
+                    cast.setLocation(cast.getX()-6, cast.getY()); 
                     Greenfoot.delay(1);
                 } 
                 else {   
-                    cast.setLocation(cast.getX()+5, cast.getY()-4);
+                    cast.setLocation(cast.getX()+6, cast.getY()); 
                     Greenfoot.delay(1);
                 }
             }
             for (int i = 0; i < 30; i ++) {
                 if (this instanceof Opponent) {
-                    cast.setLocation(cast.getX()-5, cast.getY()+4);
+                    cast.setLocation(cast.getX()-6, cast.getY()); 
                     Greenfoot.delay(1);
                 }
                 else {   
-                    cast.setLocation(cast.getX()+5, cast.getY()+4);
+                    cast.setLocation(cast.getX()+6, cast.getY()); 
                     Greenfoot.delay(1);
                 }
             }

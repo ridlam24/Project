@@ -66,6 +66,7 @@ public abstract class Wizard extends Actor
                 Greenfoot.delay(5);
             }
             GreenfootSound sound = new GreenfootSound("twinkle.mp3");
+            sound.setVolume(50); 
             sound.play();
             Greenfoot.delay(2);
         }

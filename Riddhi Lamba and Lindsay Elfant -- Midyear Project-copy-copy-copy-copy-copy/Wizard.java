@@ -91,6 +91,7 @@ public abstract class Wizard extends Actor
                 }
             }
             GreenfootSound sound = new GreenfootSound("au.wav");
+            sound.setVolume(35);
             sound.play();
         }
         ((MyWorld) getWorld()).removeObject(cast);

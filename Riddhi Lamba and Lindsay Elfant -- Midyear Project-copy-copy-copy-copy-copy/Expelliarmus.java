@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Expelliarmus extends Offensive
 {
     public Expelliarmus() {
-        setDamage(-12);
+        setDamage(-11);
         getImage().scale(getImage().getWidth()/5, getImage().getHeight()/5);
     }
     

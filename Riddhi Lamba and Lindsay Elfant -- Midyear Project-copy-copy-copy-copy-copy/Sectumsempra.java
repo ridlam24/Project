@@ -24,7 +24,7 @@ public class Sectumsempra extends Offensive
     }
 
     public int randomDamage() {
-        int random = Greenfoot.getRandomNumber(3); 
+        int random = Greenfoot.getRandomNumber(4); 
         if (random == 0) {
             return -22; 
         }

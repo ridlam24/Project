@@ -132,11 +132,19 @@ dependency8.type=UsesDependency
 dependency9.from=Health
 dependency9.to=MyWorld
 dependency9.type=UsesDependency
+<<<<<<< HEAD
 editor.fx.0.height=0
 editor.fx.0.width=0
 editor.fx.0.x=0
 editor.fx.0.y=0
 height=730
+=======
+editor.fx.0.height=735
+editor.fx.0.width=813
+editor.fx.0.x=313
+editor.fx.0.y=39
+height=686
+>>>>>>> 605f0b4b0c72dc2cc157829ade6839c35d47af13
 package.numDependencies=38
 package.numTargets=27
 project.charset=windows-1252
